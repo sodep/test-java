@@ -1,0 +1,42 @@
+<html>
+<head>
+    <title>Task List</title>
+
+    <style type="text/css">
+        table {
+            border: 1px solid black;
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        td, th {
+            padding: 0.2em 0.5em;
+            border: 1px solid gray;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Tasks</h1>
+
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Description</th>
+        <th>Assignee</th>
+        <th>Due</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr th:each="task : ${tasks}">
+            <td th:text="${task.id}"></td>
+            <td th:text="${task.description}"></td>
+            <td th:if="${task.assignee != null}"><a th:href="@{'mailto:' + ${task.assignee.email}}"><span th:text="${task.assignee.name}"></span></a></td>
+        	<td th:if="${task.assignee == null}"><em>none</em></td>
+        	<td th:text="${task.due}"></td>
+        </tr>
+    </tbody>
+</table>
+</body>
+</html>
