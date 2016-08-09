@@ -11,10 +11,10 @@ página.
 El resto de esta documentación se escribe en inglés con propósitos de evaluar
 la comprensión del idioma de los participantes.
 
-Senior Developer Candidate
---------------------------
+Your Tasks
+-----------
 
-## Features to add in the Backend
+## Backend Tasks
 
 Add a REST web service for querying, adding, updating and removing tasks.
 The service should respond to the following URLs:
@@ -34,7 +34,7 @@ The service should respond to the following URLs:
     columns should display the assignee name for each task. Your task here is
     to fix the bug with as few lines of code as possible.
 
-## Features to add in the Frontend
+## Frontend Tasks
 
 *   When you build and run the project (see section below), you will
     have access to the URL `http://localhost:8080/tasks.html`. There 
@@ -47,33 +47,12 @@ The service should respond to the following URLs:
     Your task here is to connect the JavaScript code with the REST services 
     added to the backend, by using AJAX requests. 
     
-    When you add a new task in the page, the REST URL to add new tasks should 
-    be invoked with an AJAX request in order to store the new task in the backend 
-    database. 
+    To give an example, when you add a new task in the page, the REST URL to add 
+    new tasks should be invoked with an AJAX request in order to store the new task 
+    in the backend database. 
     
     Similar operations should be implementend in JavaScript to list or update the tasks, 
     and also when you "clear completed" tasks.
-
-
-Junior Developer Candidate
---------------------------
-
-## Features to add
-
-Add a REST web service for querying and adding  tasks.
-The service should respond to the following URLs:
-
-*   `api/tasks` - list all tasks
-*   `api/tasks` - create a new task
-
-## Bugs to Fix
-
-*   When you build the project (see section further below), and you access
-    to `http://localhost:8080/`, you will see the column 'Assignee' with `none`
-    values for every row. This is a bug in the provided code base because those
-    columns should display the assignee name for each task. Your task here is
-    to fix the bug with as few lines of code as possible.
-
 
 ## General guidelines
 
@@ -110,14 +89,7 @@ Evaluation Criteria
     other Java developers?  Is it adequately (but not excessively)
     commented?
 
-4.  Working with git
-
-    Good git usage is important for collaborating with other developers.
-    Make sure each change is logically distinct (i.e. don't combine
-    unrelated changes into a single "mega" commit).  Make sure the commit
-    message for each change is meaningful.
-
-5. Understanding the specification
+4. Understanding the specification
 
     You should be able to complete the task by reading the specification
     in this README and building the solution the specification is asking.
