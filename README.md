@@ -1,5 +1,5 @@
-Ejercicio para contratación de Developer Java
-==============================================
+Ejercicio para evaluación de candidatos para Developers Java
+===========================================================
 
 Descripción del Proyecto
 ------------------------
@@ -19,8 +19,9 @@ Your Tasks
 Add a REST web service for querying, adding, updating and removing tasks.
 The service should respond to the following URLs:
 
-*   `api/tasks` - list all tasks; optionally accept query parameters for
-    pagination and filters, for example to filter and list all completed tasks.
+*   `api/tasks` - list all tasks; optionally 
+*   `api/tasks` - list tasks accepting query parameters for
+     pagination and filters, for example to filter all 'completed' tasks.
 *   `api/tasks` - create a new task
 *   `api/tasks/<id>` - retrieve details of the task identified by *id*
 *   `api/tasks/<id>` - update the existing task identified by *id*
@@ -28,11 +29,24 @@ The service should respond to the following URLs:
 
 ## Bugs to Fix
 
-*   When you run the project (see section further below), and you access
+*   When you run the project (see section below), and you access
     to `http://localhost:8080/`, you will see the column 'Assignee' with `none`
-    values for every row. This is a bug in the provided code base because those
-    columns should display the assignee name for each task. Your task here is
-    to fix the bug with as few lines of code as possible.
+    values for every row. 
+    
+    This is a BUG in the provided code base. Some tasks do have assignee and the columns
+    for those tasks should not be empty. 
+    
+    Your task here is to fix the bug with as few lines of code as possible.
+
+## Easy Tasks
+
+Write an utility class with the following methods:
+
+*   A method that returns `true` if a given `Task` was completed.
+*   A method that returns `true` if a given `Task` was completed BEFORE its due date.
+*   A method that returns `true` if a `Task` due date has expired.
+*   A method that returns `true` if a `Task` due date has expired and the `Task` was not completed.  
+*   Write UNIT tests for the utility class and its methods.
 
 ## Frontend Tasks
 
@@ -68,7 +82,6 @@ encouraged to add any open source third-party library (must be available on
 Maven Central) that you feel makes your task easier.
 
 
-
 Evaluation Criteria
 -------------------
 
@@ -89,10 +102,10 @@ Evaluation Criteria
     other Java developers?  Is it adequately (but not excessively)
     commented?
 
-4. Understanding the specification
+4.  Understanding the specification
 
-    You should be able to complete the task by reading the specification
-    in this README and building the solution the specification is asking.
+    You should be able to complete the tasks by reading the specification
+    in this README and building the solution as the specification is asking.
 
 
 Getting Started
@@ -126,8 +139,10 @@ with maven.
 
 Running the project will create a database file in the project root directory 
 called `development.h2.db` (there may be other, similarly named, supplemental
-files), create the two project tables, and populate them with some sample
-data.  If you ever need to reset the database to its default state, simply
+files). Running the project will also create the two project tables, and populate
+them with some sample data.  
+
+If you ever need to reset the database to its default state, simply
 delete the development.\*.db files and run the project again.
 
 If you require changes to the database schema, just change the classes
@@ -158,5 +173,5 @@ of your changes:
 
 This will create one or more numbered patch files.
 
-sSend an email with the patch files attached to the person who sent you this
+Send an email with the patch files attached to the person who sent you this
 test.

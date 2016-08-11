@@ -25,10 +25,22 @@ public final class Task implements Serializable {
     
 	private Assignee assignee;
     
+    /**
+     The date where the task
+     should be completed.
+    */
 	private Date due;
     
+    /**
+      The date where the task
+      was completed.
+    */
 	private Date completedAt;
     
+    /**
+      The date where the task
+      was created.
+    */
 	private Date createdAt;
 
     public Long getId() {
