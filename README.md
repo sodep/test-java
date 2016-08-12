@@ -58,16 +58,19 @@ Write an utility class with the following methods:
     This page stores information about the tasks only client-side by using 
     the [browser localStorage](http://www.w3schools.com/html/html5_webstorage.asp). 
     
-    Your task here is to connect the JavaScript code with the REST services 
-    added to the backend, by using AJAX requests. 
-    
-    To give an example, when you add a new task in the page, the REST URL to add 
+    The tasks should be retrieved from and stored in the backend.
+
+    For instance, when you add a new task in the page, the REST URL to add 
     new tasks should be invoked with an AJAX request in order to store the new task 
     in the backend database. 
     
     Similar operations should be implementend in JavaScript to list or update the tasks, 
     and also when you "clear completed" tasks.
 
+    Your task here is to connect the JavaScript code with the REST services 
+    added to the backend, by using AJAX requests. 
+    
+    
 ## General guidelines
 
 The URLs for the REST services should have the appropiate HTTP verb regarding each operation.
@@ -102,7 +105,13 @@ Evaluation Criteria
     other Java developers?  Is it adequately (but not excessively)
     commented?
 
-4.  Understanding the specification
+4.  Tooling knowledge
+
+    Do you know how to use Maven and run it from a command line? The candidates
+    should at least be able to build the base project using Maven and run the
+    application.    
+
+5.  Understanding the specification
 
     You should be able to complete the tasks by reading the specification
     in this README and building the solution as the specification is asking.
