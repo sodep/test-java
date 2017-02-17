@@ -27,6 +27,18 @@ The service should respond to the following URLs:
 *   `api/tasks/<id>` - update the existing task identified by *id*
 *   `api/tasks/<id>` - delete the existing task identified by *id*
 
+**Functional Requirement for the REST services**:
+
+*   The update service should allow to assign a task to a person
+*   The update service should allow to change the state of a task so that the task is in a "completed state"
+*   The application should NOT allow to assign more than 5 tasks to a given person. It should produce an error in those cases and inform the consumer of the service accordingly.
+
+## Unit Test Tasks
+
+Write a unit test that verifies this **functional requirement** mentioned above:
+
+>> The application should NOT allow to assign more than 5 tasks to a given person. It should produce an error in those cases and inform the consumer of the service accordingly.
+
 ## Bugs to Fix
 
 *   When you run the project (see section below), and you access
@@ -37,16 +49,6 @@ The service should respond to the following URLs:
     for those tasks should not be empty. 
     
     Your task here is to fix the bug with as few lines of code as possible.
-
-## Easy Tasks
-
-Write an utility class with the following methods:
-
-*   A method that returns `true` if a given `Task` was completed.
-*   A method that returns `true` if a given `Task` was completed BEFORE its due date.
-*   A method that returns `true` if a `Task` due date has expired.
-*   A method that returns `true` if a `Task` due date has expired and the `Task` was not completed.  
-*   Write UNIT tests for the utility class and its methods.
 
 ## Frontend Tasks
 
@@ -93,29 +95,24 @@ Evaluation Criteria
     Naturally, the project you submit must be functional.  You will also be
     evaluated on *how* your solution addresses the assigned tasks.  
 
-2.  Platform knowledge
+2.  Java Platform and Language knowledge
 
     Does your code demonstrate your knowledge of the capabilities of the
-    Java platform and its resources?
+    Java platform and its resources? Is your code Object Oriented and uses 
+    Java Language best practices? 
 
-3.  Coding style
+3.  Coding style and conventions
 
-    Is your coding style neat?  Does it fit in with the prevailing style of
+    Is your coding style neat and clean?  Does it fit in with the prevailing style of
     the project?  Is it idiomatic such that it will be easily understood by
     other Java developers?  Is it adequately (but not excessively)
-    commented?
+    commented? Does it follow the generally accepted code conventions? 
 
-4.  Tooling knowledge
+4.  Code Design and Structure
 
-    Do you know how to use Maven and run it from a command line? The candidates
-    should at least be able to build the base project using Maven and run the
-    application.    
-
-5.  Understanding the specification
-
-    You should be able to complete the tasks by reading the specification
-    in this README and building the solution as the specification is asking.
-
+    Is your code well designed and has and easy to understand structure? 
+    Does it uses design patterns if it is needed by the solution? 
+    Does it avoid over using some design patterns and abstractions?
 
 Getting Started
 ---------------
