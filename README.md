@@ -16,6 +16,8 @@ Your Tasks
 
 ## Backend Tasks
 
+### 1) Rest Web Services
+
 Add a REST web service for querying, adding, updating and removing tasks.
 The service should respond to the following URLs:
 
@@ -33,13 +35,13 @@ The service should respond to the following URLs:
 *   The update service should allow to change the state of a task so that the task is in a "completed state"
 *   The application should NOT allow to assign more than 5 tasks to a given person. It should produce an error in those cases and inform the consumer of the service accordingly.
 
-## Unit Test Tasks
+### 2) Unit Tests
 
 Write a unit test that verifies this **functional requirement** mentioned above:
 
 >> The application should NOT allow to assign more than 5 tasks to a given person. It should produce an error in those cases and inform the consumer of the service accordingly.
 
-## Bugs to Fix
+### 3) Bugs to Fix
 
 *   When you run the project (see section below), and you access
     to `http://localhost:8080/`, you will see the column 'Assignee' with `none`
