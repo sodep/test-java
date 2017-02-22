@@ -52,7 +52,8 @@ Write a unit test that verifies this **functional requirement** mentioned above:
 
 ## Frontend Tasks
 
-*   When you build and run the project (see section below), you will
+### 1) Frontend for Tasks Manager Application
+*   When you build and run the tasks management project (see section below), you will
     have access to the URL `http://localhost:8080/tasks.html`. There 
     you will see a page that allows the user to create, list and mark tasks 
     as completed. 
@@ -71,7 +72,16 @@ Write a unit test that verifies this **functional requirement** mentioned above:
 
     Your task here is to connect the JavaScript code with the REST services 
     added to the backend, by using AJAX requests. 
-    
+
+### 2) Ted Talk Player Web Page
+
+Using JSON data from the TED talk library (see data/talks.json), you're going to be building a simple webpage that does the following things:
+
+1. Allows the user to play the most recent TED talk video (hint: use the `pubDate` property to sort the videos and first display the most recent one)
+2. Displays the title and description for this video.
+3. Allows a user to click to see the next / previous videos.    
+
+You should design the HTML/CSS layout of your page in the best and most userfriendly way, within the time you have to submit this test. Any frameworks or libraries can be used, but please explain your decision.
     
 ## General guidelines
 
