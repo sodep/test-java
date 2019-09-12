@@ -5,9 +5,9 @@
   </a>
 </p>
 
-> El siguiente proyecto contiene desafíos a resolver para potenciales developers
+> El siguiente proyecto contiene desafíos a resolver para potenciales developers. Es un proyecto elaborado y mantenido por Sodep S.A.
 
-### 🏠 [Homepage](http://sodep.com.py)
+### 🏠 [Visitar sitio de SODEP](http://sodep.com.py)
 
 ## Instrucciones
 
@@ -79,7 +79,7 @@ La aplicación de frontend debe permitir:
 
 * Se debe proveer de una forma sencilla de probar los ejercicios. Para el caso del backend idealmente sería unos datos de prueba para inserción en base de datos y además una forma de poder invocar a los servicios REST
 * Se debe proveer instrucciones detalladas de cómo levantar la solución enviada. Ya sea comandos de instalación/ejecución y todo lo necesario para ejecutar y probar la solución
-* Se puede implementar la solución en cualquier framework con el que se esté familiarizado
+* Se puede implementar la solución con cualquier framework o librería que facilite el desarrollo. Y se recomienda utilizar herramientas con las que se esté familiarizado
 
 ## Empezando el Desafío
 
