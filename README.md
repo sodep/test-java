@@ -1,195 +1,116 @@
-Ejercicio para evaluación de candidatos para Developers Java
-===========================================================
+<h1 align="center">¡Bienvenido! 👋</h1>
+<p>
+  <a href="https://twitter.com/sodepsa">
+    <img alt="Twitter: sodepsa" src="https://img.shields.io/twitter/follow/sodepsa.svg?style=social" target="_blank" />
+  </a>
+</p>
 
-Descripción del Proyecto
-------------------------
+> El siguiente proyecto contiene desafíos a resolver para potenciales developers
 
-Esta aplicación es para un manejador de tareas. Actualmente, la aplicación
-lee una lista de tareas de una base de datos relacional y la presenta en una
-página.
+### 🏠 [Homepage](http://sodep.com.py)
 
-El resto de esta documentación se escribe en inglés con propósitos de evaluar
-la comprensión del idioma de los participantes.
+## Instrucciones
 
-Your Tasks
------------
+Leer las instrucciones con atención e implementar lo que se tiene familiaridad en primer lugar.
 
-## Backend Tasks
+Tanto para frontend como backend se puede usar algún framework de preferencia.
 
-### 1) Rest Web Services
+Adicionales instrucciones serán recibidas por e-mail por la persona que te envió este repo.
 
-Add a REST web service for querying, adding, updating and removing tasks.
-The service should respond to the following URLs:
+## Proyecto Manejador de Tareas
 
-*   `api/tasks` - list all tasks; optionally 
-*   `api/tasks` - list tasks accepting query parameters for
-     pagination and filters, for example to filter all 'completed' tasks.
-*   `api/tasks` - create a new task
-*   `api/tasks/<id>` - retrieve details of the task identified by *id*
-*   `api/tasks/<id>` - update the existing task identified by *id*
-*   `api/tasks/<id>` - delete the existing task identified by *id*
+El desafío es implementar un manejador de tareas que permita una lista de tareas.
 
-**Functional Requirement for the REST services**:
+### Requisitos para el backend
 
-*   The update service should allow to assign a task to a person
-*   The update service should allow to change the state of a task so that the task is in a "completed state"
-*   The application should NOT allow to assign more than 5 tasks to a given person. It should produce an error in those cases and inform the consumer of the service accordingly.
+#### 1) Implementar servicios REST de administración de tareas
 
-### 2) Unit Tests
+Se pide poder realizar las siguientes acciones sobre tareas, mediante servicios REST:
 
-Write a unit test that verifies this **functional requirement** mentioned above:
+* Listar, crear, eliminar tareas
+* El listado de tareas se debe poder filtrar por tareas completadas, activas (aún no completadas) y todas las tareas (activas y completadas)
+* Se debe poder editar la descripción de una tarea y además marcarla como "completada"
+* Además de la eliminación individual, se debe poder eliminar todas las tareas completadas
 
->> The application should NOT allow to assign more than 5 tasks to a given person. It should produce an error in those cases and inform the consumer of the service accordingly.
+Cada tarea debe tener las siguientes propiedades:
+* Una descripción
+* Una fecha y hora de creación
+* Una fecha y hora de completitud
+* Un estado que permita saber si la tarea está activa o ya fue completada
 
-### 3) Bugs to Fix
+#### 2) Implementar servicios REST de asignación de tareas a usuarios
 
-*   When you run the project (see section below), and you access
-    to `http://localhost:8080/`, you will see the column 'Assignee' with `none`
-    values for every row. 
-    
-    This is a BUG in the provided code base. Some tasks do have assignee and the columns
-    for those tasks should not be empty. 
-    
-    Your task here is to fix the bug with as few lines of code as possible.
+Se debe contar con un servicio que permita asignar una tarea a un usuario del sistema. La restricción que se pide para este servicio es que un usuario no pueda tener más de 5 tareas activas al mismo tiempo. El servicio debe implementar dicha validacion.
 
-## Frontend Tasks
+Se puede modelar la estructura de un usuario con las propiedades que se consideren necesarias.
 
-### 1) Frontend for Tasks Manager Application
-*   When you build and run the tasks management project (see section below), you will
-    have access to the URL `http://localhost:8080/tasks.html`. There 
-    you will see a page that allows the user to create, list and mark tasks 
-    as completed. 
-    
-    This page stores information about the tasks only client-side by using 
-    the [browser localStorage](http://www.w3schools.com/html/html5_webstorage.asp). 
-    
-    The tasks should be retrieved from and stored in the backend.
+#### 3) Implementar servicios REST de estadísticas de tareas
 
-    For instance, when you add a new task in the page, the REST URL to add 
-    new tasks should be invoked with an AJAX request in order to store the new task 
-    in the backend database. 
-    
-    Similar operations should be implementend in JavaScript to list or update the tasks, 
-    and also when you "clear completed" tasks.
+Se pide un servicio REST de consulta que devuelva los siguientes datos estadísticos:
 
-    Your task here is to connect the JavaScript code with the REST services 
-    added to the backend, by using AJAX requests. 
+* Tarea con mayor duración, entre el momento que fué creada y completada
+* Tarea con menor duración
+* Cantidad de tareas que fueron completadas en el día actual
+* Cantidad de tareas activas en el día actual
+* Porcentaje de tareas completadas sobre el total de tareas existentes
 
-### 2) Ted Talk Player Web Page
+#### 4) Test Unitarios
 
-Using JSON data from the TED talk library (see data/talks.json), you're going to be building a simple webpage that does the following things:
+Se debe implementar test unitarios o de integración que verifiquen los anteriores requerimientos funcionales del 1 al 3. No es necesario tener full coverage, sino seleccionar los puntos más críticos de la lógica del sistema y enfocarse en eso. Por ejemplo, asegurarse de que se puedan crear correctamente las tareas y marcarlas como completadas.
 
-1. Allows the user to play the most recent TED talk video (hint: use the `pubDate` property to sort the videos and first display the most recent one)
-2. Displays the title and description for this video.
-3. Allows a user to click to see the next / previous videos.    
+### Requisitos para el frontend
 
-You should design the HTML/CSS layout of your page in the best and most userfriendly way, within the time you have to submit this test. Any frameworks or libraries can be used, but please explain your decision.
-    
-## General guidelines
+Se debe implementar una aplicación o página web que permita administrar tareas y que haga uso de los servicios REST desarrollados en el backend.
 
-The URLs for the REST services should have the appropiate HTTP verb regarding each operation.
+La aplicación de frontend debe permitir:
+* Alta y baja de tareas
+* Edición de la descripción de una tarea
+* Marcar una tarea como completada
+* Filtrar tareas completadas y activas
+* Eliminar todas las completadas
+* Asignación de tareas a usuarios
+* Ver un dashboard con información estadística de tareas, de acuerdo a lo que retorne el backend
 
-The services MUST accept and return resources in JSON format. Design the 
-JSON schema you feel is appropriate given the existing data structure.
+## Proyecto [Frontend]
 
-Add any necessary unit or integration tests.
+> // TODO
 
-You may use any IDE or text editor you are comfortable with.  You are
-encouraged to add any open source third-party library (must be available on
-Maven Central) that you feel makes your task easier.
+## Guías generales
 
+* Se debe proveer de una forma sencilla de probar los ejercicios. Para el caso del backend idealmente sería unos datos de prueba para inserción en base de datos y además una forma de poder invocar a los servicios REST
+* Se debe proveer instrucciones detalladas de cómo levantar la solución enviada. Ya sea comandos de instalación/ejecución y todo lo necesario para ejecutar y probar la solución
+* Se puede implementar la solución en cualquier framework con el que se esté familiarizado
 
-Evaluation Criteria
--------------------
+## Empezando el Desafío
 
-1.  Correctness of solution
+Para empezar a trabajar se debe clonar este proyecto localmente, agregando el código dentro del propio proyecto clonado. 
 
-    Naturally, the project you submit must be functional.  You will also be
-    evaluated on *how* your solution addresses the assigned tasks.  
+Cualquier documentación se puede agregar como archivos con extensión `.md`.
 
-2.  Java Platform and Language knowledge
+Se recomienda ir haciendo commits a medida que se avanza con la solución. Y agrupar estos commits si corresponde hacerlo.
 
-    Does your code demonstrate your knowledge of the capabilities of the
-    Java platform and its resources? Is your code Object Oriented and uses 
-    Java Language best practices? 
+## Envíar el código para evaluación
 
-3.  Coding style and conventions
-
-    Is your coding style neat and clean?  Does it fit in with the prevailing style of
-    the project?  Is it idiomatic such that it will be easily understood by
-    other Java developers?  Is it adequately (but not excessively)
-    commented? Does it follow the generally accepted code conventions? 
-
-4.  Code Design and Structure
-
-    Is your code well designed and has and easy to understand structure? 
-    Does it uses design patterns if it is needed by the solution? 
-    Does it avoid over using some design patterns and abstractions?
-
-Getting Started
----------------
-
-### Clone the project to your local machine
-
-You are probably reading this on GitHub already.  If not, you can find the
-project [on GitHub](https://www.github.com/rodrigojv/test-java).
-
-To begin work on the project, start by cloning the repository to your local
-machine.  Do your work locally, committing your changes to your local git
-repository as you go.
-
-
-### Building the project
-
-The project includes a pom.xml file allowing it to be built by
-[Maven](http://maven.apache.org).  Simply running `mvn package` will
-download all dependencies and build a standard JAR file.
-
-
-### Managing the database
-
-The project uses an [H2 Database](http://www.h2database.com) which is a
-simple in-process file-backed data store.  This saves the trouble of
-configuring a database server.
-
-The project tables are created and populated when you run the project
-with maven.
-
-Running the project will create a database file in the project root directory 
-called `development.h2.db` (there may be other, similarly named, supplemental
-files). Running the project will also create the two project tables, and populate
-them with some sample data.  
-
-If you ever need to reset the database to its default state, simply
-delete the development.\*.db files and run the project again.
-
-If you require changes to the database schema, just change the classes
-annotated with `@Entity` (or create a new one) and run the project. This
-will apply the changes to the database.
-
-
-### Running the application
-
-You can run the project inside a Tomcat container using this command:
-
-    mvn spring-boot:run
-
-This starts a Tomcat server on your local machine listening on port 8080.  To
-see the application's home page, point your browser to
-`http://localhost:8080/`.  This page shows a list of tasks in the tasks
-database.
-
-
-Submitting Your Code For Evaluation
------------------------------------
-
-When you are finished and ready to submit your work, commit your changes
-and use the following command to generate a series of patch files with all 
-of your changes:
+Cuando se finaliza el trabajo y se está listo para enviar, se debe utilizar el siguiente comando que va a generar una serie de archivos patch con los cambios realizados:
 
     git format-patch origin/master
 
-This will create one or more numbered patch files.
+Esto va a crear uno o más archivos `.patch` numerados en el directorio del proyecto.
 
-Send an email with the patch files attached to the person who sent you this
-test.
+Enviar un email con estos archivos adjuntados a la persona que te envió este test.
+
+¡Buena suerte! 🎉
+
+## Autor
+
+👤 **Sodep S.A.**
+
+* Twitter: [@sodepsa](https://twitter.com/sodepsa)
+* Github: [@sodep](https://github.com/sodep)
+
+## Dános tu apoyo
+
+Con una ⭐️ si este repo te sirvió de ayuda.
+
+***
+_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
