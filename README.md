@@ -7,40 +7,38 @@
 
 > El siguiente proyecto contiene desafíos a resolver para potenciales developers. Es un proyecto elaborado y mantenido por Sodep S.A.
 
-### 🏠 [Visitar sitio de SODEP](http://sodep.com.py)
+### 🏠 [Visitar SODEP](http://sodep.com.py)
 
 ## Instrucciones
 
-Leer las instrucciones con atención e implementar lo que se tiene familiaridad en primer lugar.
-
-Tanto para frontend como backend se puede usar algún framework de preferencia.
-
-Adicionales instrucciones serán recibidas por e-mail por la persona que te envió este repo.
+Leer las instrucciones con atención e implementar lo que se tiene familiaridad en primer lugar. Adicionales instrucciones serán recibidas por e-mail por la persona que te envió este repo.
 
 ## Proyecto Manejador de Tareas
 
-El desafío es implementar un manejador de tareas que permita una lista de tareas.
+El primer desafío es desarrollar un manejador de tareas.
 
 ### Requisitos para el backend
 
 #### 1) Implementar servicios REST de administración de tareas
 
-Se pide poder realizar las siguientes acciones sobre tareas, mediante servicios REST:
+El primer paso es implementar servicios REST que faciliten el trabajo con tareas mediante las siguientes acciones:
 
-* Listar, crear, eliminar tareas
-* El listado de tareas se debe poder filtrar por tareas completadas, activas (aún no completadas) y todas las tareas (activas y completadas)
-* Se debe poder editar la descripción de una tarea y además marcarla como "completada"
-* Además de la eliminación individual, se debe poder eliminar todas las tareas completadas
+* Listado, creación y eliminación de tareas
+* Un filtro del listado de tareas que permita obtener las tareas completadas, activas (aún no completadas) y todas las tareas (activas y completadas)
+* Actualización de una tarea, editando su descripción y poder marcarla como "completada"
+* Además de la eliminación individual, permitir eliminar todas las tareas completadas
 
-Cada tarea debe tener las siguientes propiedades:
+Cada tarea tiene las siguientes propiedades:
 * Una descripción
 * Una fecha y hora de creación
 * Una fecha y hora de completitud
 * Un estado que permita saber si la tarea está activa o ya fue completada
 
+Se puede agregar otras propiedades que se consideren necesarias.
+
 #### 2) Implementar servicios REST de asignación de tareas a usuarios
 
-Se debe contar con un servicio que permita asignar una tarea a un usuario del sistema. La restricción que se pide para este servicio es que un usuario no pueda tener más de 5 tareas activas al mismo tiempo. El servicio debe implementar dicha validacion.
+Se pide contar con un servicio que permita asignar una tarea a un usuario del sistema. La restricción para este servicio es que un usuario no pueda tener más de 5 tareas activas al mismo tiempo. Corresponde al servicio implementar dicha validacion.
 
 Se puede modelar la estructura de un usuario con las propiedades que se consideren necesarias.
 
@@ -56,42 +54,50 @@ Se pide un servicio REST de consulta que devuelva los siguientes datos estadíst
 
 #### 4) Test Unitarios
 
-Se debe implementar test unitarios o de integración que verifiquen los anteriores requerimientos funcionales del 1 al 3. No es necesario tener full coverage, sino seleccionar los puntos más críticos de la lógica del sistema y enfocarse en eso. Por ejemplo, asegurarse de que se puedan crear correctamente las tareas y marcarlas como completadas.
+Escribir test unitarios o de integración que verifiquen los anteriores requerimientos funcionales del 1 al 3. No es necesario tener full coverage, sino seleccionar los puntos más críticos de la lógica del sistema y enfocarse en eso. Por ejemplo, asegurarse de que se puedan crear correctamente las tareas y marcarlas como completadas.
 
 ### Requisitos para el frontend
 
-Se debe implementar una aplicación o página web que permita administrar tareas y que haga uso de los servicios REST desarrollados en el backend.
+El desafío aquí es crear una aplicación WEB que permita administrar tareas y que haga uso de los servicios REST desarrollados en el backend.
 
-La aplicación de frontend debe permitir:
+La aplicación WEB debe ofrecer las funcionalidades de:
 * Alta y baja de tareas
 * Edición de la descripción de una tarea
 * Marcar una tarea como completada
 * Filtrar tareas completadas y activas
-* Eliminar todas las completadas
+* Eliminar todas las tareas completadas
 * Asignación de tareas a usuarios
 * Ver un dashboard con información estadística de tareas, de acuerdo a lo que retorne el backend
 
-## Proyecto [Frontend]
+## Proyecto Frontend: GitHub Client
 
-> // TODO
+El objetivo es desarrollar una página web que actué como cliente del [API de GitHub](https://developer.github.com/v3/).
+
+El cliente muestra la siguiente información obtenida de GitHub:
+
+* Lista de repositorios ordenados por los más populares y con posibilidad de filtrar por el día, la semana y el mes actual
+* Por cada repositorio mostrar su dueño, avatar, cantidad de estrellas y cantidad de issues abiertos. Además de otra información que se considere útil para enriquecer visualmente el listado de repositorios
+* Permitir buscar una persona u organización y mostrar los repositorios públicos que posee clasificados por cantidad de estrellas
+
+Diseñar y estructurar el HTML/CSS de la página, de la forma más amigable posible en el tiempo que se tiene disponible.
 
 ## Guías generales
 
-* Se debe proveer de una forma sencilla de probar los ejercicios. Para el caso del backend idealmente sería unos datos de prueba para inserción en base de datos y además una forma de poder invocar a los servicios REST
-* Se debe proveer instrucciones detalladas de cómo levantar la solución enviada. Ya sea comandos de instalación/ejecución y todo lo necesario para ejecutar y probar la solución
+* Proveer de una forma sencilla de probar los ejercicios. Para el caso del backend idealmente sería unos datos de prueba para inserción en base de datos y además una forma de poder invocar a los servicios REST
+* Adjuntar documentación con instrucciones detalladas de cómo levantar la solución enviada. Ya sea comandos de instalación/ejecución y todo lo necesario para ejecutar y probar la solución
 * Se puede implementar la solución con cualquier framework o librería que facilite el desarrollo. Y se recomienda utilizar herramientas con las que se esté familiarizado
 
 ## Empezando el Desafío
 
-Para empezar a trabajar se debe clonar este proyecto localmente, agregando el código dentro del propio proyecto clonado. 
+Para empezar a trabajar clonar este proyecto localmente, agregando el código dentro del proyecto clonado. 
 
-Cualquier documentación se puede agregar como archivos con extensión `.md`.
+Adjuntar cualquier documentación al proyecto en forma de archivos con extensión `.md`.
 
-Se recomienda ir haciendo commits a medida que se avanza con la solución. Y agrupar estos commits si corresponde hacerlo.
+Se recomienda ir haciendo commits a medida que se avanza con la solución. Agrupando estos commits si corresponde hacerlo.
 
 ## Envíar el código para evaluación
 
-Cuando se finaliza el trabajo y se está listo para enviar, se debe utilizar el siguiente comando que va a generar una serie de archivos patch con los cambios realizados:
+Cuando se finaliza el trabajo y se está listo para enviar, utilizar el siguiente comando que va a generar una serie de archivos patch con los cambios realizados:
 
     git format-patch origin/master
 
