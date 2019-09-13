@@ -83,7 +83,7 @@ Diseñar y estructurar el HTML/CSS de la página, de la forma más amigable posi
 
 ## Guías generales
 
-* Proveer de una forma sencilla de probar los ejercicios. Para el caso del backend idealmente sería unos datos de prueba para inserción en base de datos y además una forma de poder invocar a los servicios REST
+* Proveer de una forma sencilla de probar los ejercicios. Para el caso del backend idealmente sería unos datos de prueba para inserción en base de datos y además una forma de poder invocar a los servicios REST. Para el frontend adjuntar los API KEY necesarios para comunicación con GitHub o la forma de conseguirlo 
 * Adjuntar documentación con instrucciones detalladas de cómo levantar la solución enviada. Ya sea comandos de instalación/ejecución y todo lo necesario para ejecutar y probar la solución
 * Se puede implementar la solución con cualquier framework o librería que facilite el desarrollo. Y se recomienda utilizar herramientas con las que se esté familiarizado
 
