@@ -99,7 +99,9 @@ Se recomienda ir haciendo commits a medida que se avanza con la solución. Agrup
 
 ## Envíar el código para evaluación
 
-Crear un fork de este repositorio para implementar los ejercicios haciendo commits a medida que se los van resolviendo. Luego al finalizar enviar un email con el link al fork a la persona que te envió este test.
+Crear un fork de este repositorio para implementar los ejercicios haciendo commits a medida que se los van resolviendo.
+
+Luego al finalizar enviar un email con el link al fork a la persona que te envió este test.
 
 ¡Buena suerte! 🎉
 
