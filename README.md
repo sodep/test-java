@@ -99,13 +99,7 @@ Se recomienda ir haciendo commits a medida que se avanza con la solución. Agrup
 
 ## Envíar el código para evaluación
 
-Cuando se finaliza el trabajo y se está listo para enviar, utilizar el siguiente comando que va a generar una serie de archivos patch con los cambios realizados:
-
-    git format-patch origin/master
-
-Esto va a crear uno o más archivos `.patch` numerados en el directorio del proyecto.
-
-Enviar un email con estos archivos adjuntados a la persona que te envió este test.
+Crear un fork de este repositorio para implementar los ejercicios haciendo commits a medida que se los van resolviendo. Luego al finalizar enviar un email con el link al fork a la persona que te envió este test.
 
 ¡Buena suerte! 🎉
 
