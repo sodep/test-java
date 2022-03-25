@@ -91,15 +91,13 @@ Diseñar y estructurar el HTML/CSS de la página, de la forma más amigable posi
 
 ## Empezando el Desafío
 
-Para empezar a trabajar clonar este proyecto localmente, agregando el código dentro del proyecto clonado. 
+Para empezar crear un fork de este repositorio para implementar los ejercicios.
 
 Adjuntar cualquier documentación al proyecto en forma de archivos con extensión `.md`.
 
 Se recomienda ir haciendo commits a medida que se avanza con la solución. Agrupando estos commits si corresponde hacerlo.
 
 ## Envíar el código para evaluación
-
-Crear un fork de este repositorio para implementar los ejercicios haciendo commits a medida que se los van resolviendo.
 
 Luego al finalizar enviar un email con el link al fork a la persona que te envió este test.
 
